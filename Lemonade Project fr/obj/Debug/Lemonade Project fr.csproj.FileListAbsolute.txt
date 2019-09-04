@@ -1,2 +1,9 @@
 C:\Users\jrack\Desktop\Projects\Lemonade Project fr\Lemonade Project fr\obj\Debug\Lemonade Project fr.csprojAssemblyReference.cache
 C:\Users\jrack\Desktop\Projects\Lemonade Project fr\Lemonade Project fr\obj\Debug\Lemonade Project fr.csproj.CoreCompileInputs.cache
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\obj\Debug\Lemonade Project fr.csprojAssemblyReference.cache
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\obj\Debug\Lemonade Project fr.csproj.CoreCompileInputs.cache
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\bin\Debug\Lemonade Project fr.exe.config
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\bin\Debug\Lemonade Project fr.exe
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\bin\Debug\Lemonade Project fr.pdb
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\obj\Debug\Lemonade Project fr.exe
+C:\Users\jrack\Desktop\Projects\Lemonadestand\Lemonade Project fr\obj\Debug\Lemonade Project fr.pdb

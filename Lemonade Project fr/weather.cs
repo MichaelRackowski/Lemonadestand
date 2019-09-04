@@ -13,12 +13,15 @@ namespace Lemonade_Project_fr
         public List<string> conditionOptions;
         Random random;
         public string condition;
+        public int numberOfCustomers;
+        public int actualTempature;
+        public string customersChoice;
 
 
 
  
 
-        public void tempatureCreator()
+        public void forecastedTemperatureCreator()
         {
             forecastedTemperature = random.Next(60, 100);
             Console.ReadLine();
@@ -26,23 +29,35 @@ namespace Lemonade_Project_fr
         public void conditionCreator()
         {
             conditionOptions = new List<string>() {"Humid", "Cloudy", "Sunny", "Rainy", };
-
-
-
+         
+            Random RNG = new Random();
+            int index = RNG.Next(conditionOptions.Count);
+            condition = conditionOptions[index];
              Console.ReadLine();
         }
 
-        public void forecastCreator()
+        public void actualTemperatureCreator()
         {
-            actualTemperature = random.Next(forecastedTemperature - 5, forecastedTemperature + 5); 
-            
-                
-                
-
-
-
+            actualTemperature = random.Next(forecastedTemperature - 5 , forecastedTemperature + 5);             
         }
 
+        public void customerTemperatureCreator()
+        {
+            if (actualTemperature > 59 && actualTemperature < 78)
+            {
+                numberOfCustomers = random.Next(5, 15);
+            }
+            else if (actualTemperature > 78 && actualTemperature < 85)
+            {
+                numberOfCustomers = random.Next(8, 18);
+            }
+
+            else if (actualTemperature > 85 && actualTemperature < 101)
+            {
+                numberOfCustomers = random.Next(11, 25);
+            }
+        }
+       
 
     }
 }

@@ -11,7 +11,7 @@ namespace Lemonade_Project_fr
         static void Main(string[] args)
         {
             game game = new game();
-            game.rungame();
+            game.runGame();
         }
     }
 }

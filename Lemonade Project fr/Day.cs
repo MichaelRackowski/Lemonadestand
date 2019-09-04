@@ -8,6 +8,8 @@ namespace Lemonade_Project_fr
 {
     class Day
     {
+     
+
       
     }
 }

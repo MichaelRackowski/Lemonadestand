@@ -8,5 +8,9 @@ namespace Lemonade_Project_fr
 {
     class game
     {
+        public void runGame()
+        {
+
+        }
     }
 }
