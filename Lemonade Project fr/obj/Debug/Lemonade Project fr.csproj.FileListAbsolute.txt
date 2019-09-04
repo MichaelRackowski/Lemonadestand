@@ -1,0 +1,2 @@
+C:\Users\jrack\Desktop\Projects\Lemonade Project fr\Lemonade Project fr\obj\Debug\Lemonade Project fr.csprojAssemblyReference.cache
+C:\Users\jrack\Desktop\Projects\Lemonade Project fr\Lemonade Project fr\obj\Debug\Lemonade Project fr.csproj.CoreCompileInputs.cache
