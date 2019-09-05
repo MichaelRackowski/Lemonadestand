@@ -8,7 +8,7 @@ namespace Lemonade_Project_fr
 {
     class player
     {
-        
+        inventory inventory;
 
 
 

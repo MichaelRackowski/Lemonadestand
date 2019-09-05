@@ -8,5 +8,93 @@ namespace Lemonade_Project_fr
 {
     class store
     {
+        public double wallet;
+        public double icecubescost;
+        public double sugarcost;
+        public double lemonscost;
+        public double cupcost;
+        public string displaystore;
+
+        public store()
+        {
+            icecubescost = 0.10;
+            sugarcost = 0.15;
+            lemonscost = 0.20;
+            cupcost = 0.05;
+
+        }
+        public double Wallet()
+        {
+            Console.WriteLine($"You have ${wallet} left");
+            double Wallet = double.Parse(Console.ReadLine());
+            return wallet;
+        }
+
+
+        public double IceCubesCost()
+        {
+            Console.WriteLine("Ice cubes cost $0.10. How many ice cubes would you like to buy?");
+            double IceCubesCost = double.Parse(Console.ReadLine());
+            return icecubescost;
+        }
+
+        public double SugarCost()
+        {
+            Console.WriteLine("Sugar cost $0.15. How many cups of sugar would you like to buy?");
+            double SugarCost = double.Parse(Console.ReadLine());
+            return sugarcost;
+        }
+
+        public double LemonCost()
+        {
+            Console.WriteLine("Lemons cost $0.20. How many lemons per pitcher would you like to buy?");
+            double LemonsCost = double.Parse(Console.ReadLine());
+            return lemonscost;
+        }
+        public double CupsCost()
+        {
+            Console.WriteLine("Cups cost $0.05. How many cups would you like to buy?");
+            double CupsCost = double.Parse(Console.ReadLine());
+            return cupcost;
+        }
+
+        public void DisplayStore(player player)
+        {
+            Console.WriteLine("What would you like to shop for? [Lemons] [Ice cubes] [Sugar] [Cups]");
+            string userInput = Console.ReadLine();
+            //make a new method to slim code
+            switch (userInput)
+            {
+                case "Lemons":
+                    double lemonsToBuy = LemonCost();
+                    player.inventory.Wallet -= (lemonsToBuy * lemonscost);
+
+                    break;
+                case "Sugar":
+                    double sugarToBuy = SugarCost();
+                    player.inventory.Wallet -= (sugarToBuy * sugarcost);
+
+                    break;
+                case "Ice cubes":
+                    double iceCubesToBuy = IceCubesCost();
+                    player.inventory.Wallet -= (iceCubesToBuy * icecubescost);
+
+
+                    break;
+                case "Cups":
+                    double cupsToBuy = CupsCost();
+                    player.inventory.Wallet -= (cupsToBuy * cupcost);
+                    break;
+                default:
+                    Console.WriteLine("Please enter a coresponding choice (8^()");
+                    Console.ReadLine().ToLower();
+                    break;
+            }
+
+
+        }
     }
 }
+            
+     
+
