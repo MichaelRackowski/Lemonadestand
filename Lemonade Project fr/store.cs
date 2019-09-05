@@ -14,13 +14,15 @@ namespace Lemonade_Project_fr
         public double lemonscost;
         public double cupcost;
         public string displaystore;
+        public player Player;
 
-        public store()
+        public store(player Player)
         {
             icecubescost = 0.10;
             sugarcost = 0.15;
             lemonscost = 0.20;
             cupcost = 0.05;
+            this.Player = Player;
 
         }
         public double Wallet()
@@ -67,30 +69,38 @@ namespace Lemonade_Project_fr
             {
                 case "Lemons":
                     double lemonsToBuy = LemonCost();
-                    player.inventory.Wallet -= (lemonsToBuy * lemonscost);
-
+                    if(player.inventory.Wallet >= lemonsToBuy * lemonscost)
+                    {
+                        player.inventory.IncreaseInventory("Lemons", lemonsToBuy, lemonscost);
+                    }
                     break;
                 case "Sugar":
                     double sugarToBuy = SugarCost();
-                    player.inventory.Wallet -= (sugarToBuy * sugarcost);
-
+                    if (player.inventory.Wallet >= sugarToBuy * sugarcost)
+                    {
+                        player.inventory.IncreaseInventory("Sugar", sugarToBuy, sugarcost);
+                    }                   
                     break;
                 case "Ice cubes":
                     double iceCubesToBuy = IceCubesCost();
-                    player.inventory.Wallet -= (iceCubesToBuy * icecubescost);
-
-
+                    if (player.inventory.Wallet >= iceCubesToBuy * icecubescost)
+                    {
+                        player.inventory.IncreaseInventory("Ice cubes", iceCubesToBuy, icecubescost);
+                    }                   
                     break;
                 case "Cups":
                     double cupsToBuy = CupsCost();
-                    player.inventory.Wallet -= (cupsToBuy * cupcost);
+                    if (player.inventory.Wallet >= cupsToBuy * cupcost)
+                    {
+                        player.inventory.IncreaseInventory("Cups", cupsToBuy, cupcost);
+                    }
                     break;
                 default:
                     Console.WriteLine("Please enter a coresponding choice (8^()");
                     Console.ReadLine().ToLower();
                     break;
             }
-
+            
 
         }
     }

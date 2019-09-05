@@ -8,22 +8,53 @@ namespace Lemonade_Project_fr
 {
     class inventory
     {
-        public int InventoryPurchasing;
-        public void IventoryPurchasing()
+        public int InventoryPurchasing; //reciepe
+        public double IceCubes;
+        public double Sugar;
+        public double Cups;
+        public double Lemons;
+        public double Wallet;
+        public inventory()
         {
-            Console.WriteLine("How many ice cubes would you like to buy?");
-             Console.ReadLine();
 
-            Console.WriteLine("How many cups of sugar would you like to buy?");
-            Console.ReadLine();
-
-            Console.WriteLine("How many lemons per pitcher would you like to buy?");
-            Console.ReadLine();
-
-            Console.WriteLine("How many cups would you like to buy?");
-            Console.ReadLine();
-
+            Wallet = 20;
+        }
+        public void DisplayInventory()
+        {
+            Console.WriteLine($"You have {IceCubes} left");
+            Console.WriteLine($"You have {Sugar} left");
+            Console.WriteLine($"You have {Cups} left");
+            Console.WriteLine($"You have {Lemons} left");
+        }
+        public void IncreaseInventory(string item,double ammountToIncrease, double itemCost)
+        {
+            switch (item)
+            {
+                case "Lemons":
+                    Lemons += ammountToIncrease;
+                    Wallet -= ammountToIncrease * itemCost;
+                    break;
+                case "Sugar":
+                    Sugar += ammountToIncrease;
+                    Wallet -= ammountToIncrease * itemCost;
+                    break;
+                case "Ice Cubes":
+                    IceCubes += ammountToIncrease;
+                    Wallet -= ammountToIncrease * itemCost;
+                    break;
+                case "Cups":
+                    Cups += ammountToIncrease;
+                    Wallet -= ammountToIncrease * itemCost;
+                    break;
+                default:
+                    //// TODO. Make default
+                    break;
+            }
 
         }
+
+
+
+
     }
 }
