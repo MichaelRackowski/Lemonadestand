@@ -10,6 +10,7 @@ namespace Lemonade_Project_fr
     {
         public double productPrice;
         public bool customerChoice;
+        
 
         public void ProductPrice()
         {
@@ -41,6 +42,8 @@ namespace Lemonade_Project_fr
             {
                 customerChoice = true;
             }
+
+
         }
 
 

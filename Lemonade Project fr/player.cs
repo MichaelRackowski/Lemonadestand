@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Project_fr
 {
-    class player
+    public class player
     {
-        inventory inventory;
+       public inventory inventory;
 
 
 

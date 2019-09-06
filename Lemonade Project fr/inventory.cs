@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Project_fr
 {
-    class inventory
+    public class inventory
     {
         public int InventoryPurchasing; //reciepe
         public double IceCubes;
@@ -47,7 +47,6 @@ namespace Lemonade_Project_fr
                     Wallet -= ammountToIncrease * itemCost;
                     break;
                 default:
-                    //// TODO. Make default
                     break;
             }
 
