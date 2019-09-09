@@ -16,6 +16,7 @@ namespace Lemonade_Project_fr
         public game()
         {
             store = new store(player);
+
         }
 
 
@@ -28,14 +29,26 @@ namespace Lemonade_Project_fr
             
 
         }
+        public void DailyOutcome()
+        {
+          store.Wallet();            
+        }
+        public void DislpayForeCast(int thing)
+        {
+            for (int i = thing; i < 8; i++)
+            {
+
+            }
+        }
 
         public void runNumbersOfDay()
         {
             for(int i = 1; i < 8; i++)
             {
                 day = new Day();
+                DislpayForeCast(i);
                 day.runDay();
-                Console.WriteLine($"Day {i}");
+                Console.WriteLine($"Day {i}");  /// single responsability?????
             }
 
 
