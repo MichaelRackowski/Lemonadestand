@@ -8,23 +8,52 @@ namespace Lemonade_Project_fr
 {
     public class inventory
     {
-        public int InventoryPurchasing; //reciepe
+        public int InventoryPurchasing; 
         public double IceCubes;
         public double Sugar;
         public double Cups;
         public double Lemons;
-        public double Wallet;
+        public double wallet;
         public inventory()
         {
 
-            Wallet = 20;
+            wallet = 20.00;
+        }
+
+        public void RecipeSubtractor(Recipe Recipe)
+        {
+            if (Lemons >= Recipe.lemons)
+            {
+                Lemons -= Recipe.lemons;
+            }
+            if (Sugar >= Recipe.sugar)
+            {
+                Sugar -= Recipe.sugar;
+            }
+            if (IceCubes >= Recipe.icecubes)
+            {
+                IceCubes -= Recipe.icecubes;
+            }
+            if (Cups >= Recipe.cups)
+            {
+                Cups -= Recipe.cups;
+            }                
+        }
+
+
+        public void DisplayWallet()
+        {
+            Console.WriteLine($"You have ${wallet} left");
+            //double wallet = double.Parse
+            Console.ReadLine();
+            // return wallet;
         }
         public void DisplayInventory()
         {
-            Console.WriteLine($"You have {IceCubes} left");
-            Console.WriteLine($"You have {Sugar} left");
-            Console.WriteLine($"You have {Cups} left");
-            Console.WriteLine($"You have {Lemons} left");
+            Console.WriteLine($"You have {IceCubes} Ice cubes left");
+            Console.WriteLine($"You have {Sugar} sugar left");
+            Console.WriteLine($"You have {Cups} cups left");
+            Console.WriteLine($"You have {Lemons} lemons left");
         }
         public void IncreaseInventory(string item,double ammountToIncrease, double itemCost)
         {
@@ -32,19 +61,19 @@ namespace Lemonade_Project_fr
             {
                 case "Lemons":
                     Lemons += ammountToIncrease;
-                    Wallet -= ammountToIncrease * itemCost;
+                    wallet -= ammountToIncrease * itemCost;
                     break;
                 case "Sugar":
                     Sugar += ammountToIncrease;
-                    Wallet -= ammountToIncrease * itemCost;
+                    wallet -= ammountToIncrease * itemCost;
                     break;
-                case "Ice Cubes":
+                case "Ice cubes":
                     IceCubes += ammountToIncrease;
-                    Wallet -= ammountToIncrease * itemCost;
+                    wallet -= ammountToIncrease * itemCost;
                     break;
                 case "Cups":
                     Cups += ammountToIncrease;
-                    Wallet -= ammountToIncrease * itemCost;
+                    wallet -= ammountToIncrease * itemCost;
                     break;
                 default:
                     break;

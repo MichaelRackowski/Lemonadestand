@@ -19,7 +19,10 @@ namespace Lemonade_Project_fr
 
 
 
- 
+        public weather()
+        {
+            random = new Random();
+        }
 
         public void forecastedTemperatureCreator()
         {

@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Project_fr
 {
-    public class player
+    public class Player
     {
-       public inventory inventory;
+        public inventory inventory;
+        public Recipe recipe;
+
+        public Player ()
+        {
+            inventory = new inventory();
+            recipe = new Recipe();
+
+        } 
+
 
 
 

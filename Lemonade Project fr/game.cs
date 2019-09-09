@@ -9,13 +9,16 @@ namespace Lemonade_Project_fr
     class game
     {
         Day day = new Day();
-        player player = new player();
-        store store;
+        Player player = new Player();
+        Store store;
+        
+
+
         
         public int numbersOfDayToPlay;
         public game()
         {
-            store = new store(player);
+            store = new Store(player);
 
         }
 
@@ -24,16 +27,13 @@ namespace Lemonade_Project_fr
         {
             Console.WriteLine("How many days would you like to play? Recomended 7 days");
             numbersOfDayToPlay = int.Parse(Console.ReadLine());
-            
-          
-            
+            runNumbersOfDay();
+            day.runDay(store, player);
 
+          
         }
-        public void DailyOutcome()
-        {
-          store.Wallet();            
-        }
-        public void DislpayForeCast(int thing)
+       
+        public void DislpayForeCast(int thing) ////single responsabilty
         {
             for (int i = thing; i < 8; i++)
             {
@@ -47,8 +47,8 @@ namespace Lemonade_Project_fr
             {
                 day = new Day();
                 DislpayForeCast(i);
-                day.runDay();
-                Console.WriteLine($"Day {i}");  /// single responsability?????
+                day.runDay(store,player);
+                Console.WriteLine($"Day {i}");  /// single responsability
             }
 
 
