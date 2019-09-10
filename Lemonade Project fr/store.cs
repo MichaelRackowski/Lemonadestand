@@ -100,7 +100,8 @@ namespace Lemonade_Project_fr
                     break;
                 default:
                     Console.WriteLine("Please enter a coresponding choice (8^()");
-                    Console.ReadLine().ToLower();
+                    Console.ReadLine();
+                    DisplayStore(player);
                     break;
             }
             

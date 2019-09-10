@@ -28,6 +28,8 @@ namespace Lemonade_Project_fr
             weather.actualTemperatureCreator();
            weather.customerTemperatureCreator();
             weather.conditionCreator();
+            weather.DisplayForecastedWeather();
+            weather.DisplayActualWeather();
             player.inventory.DisplayInventory();
             player.inventory.DisplayWallet();
             store.DisplayStore(player);
@@ -50,7 +52,7 @@ namespace Lemonade_Project_fr
             int icecubesToRemove = recipe.icecubes * cupsSold;
             int cupsToRemove = recipe.cups * cupsSold;
             decreseInventory(player.inventory, "lemon", lemonsToRemove);
-            decreseInventory(player.inventory, "sugar", sugarToRemove);
+            decreseInventory(player.inventory, "sugar", sugarToRemove);    // rearrange to make more sense, test it to make sure it works once I rearrange. 
             decreseInventory(player.inventory, "cups", icecubesToRemove);
             decreseInventory(player.inventory, "ice cubes", cupsToRemove);
             AddMoney(player);

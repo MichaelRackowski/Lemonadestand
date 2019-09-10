@@ -39,6 +39,18 @@ namespace Lemonade_Project_fr
              Console.ReadLine();
         }
 
+       public void DisplayForecastedWeather()
+        {
+            Console.WriteLine("Forecast : {0} and {1} degrees.", condition, forecastedTemperature);
+            Console.ReadLine();
+        }
+        public void DisplayActualWeather()
+        {
+            Console.WriteLine("temerature: {0} and {1} weather", actualTempature, condition);
+            Console.ReadLine();
+        }
+
+
         public void actualTemperatureCreator()
         {
             actualTemperature = random.Next(forecastedTemperature - 5 , forecastedTemperature + 5);             
