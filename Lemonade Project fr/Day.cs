@@ -65,7 +65,7 @@ namespace Lemonade_Project_fr
         }
         public void ProductPrice()
         {
-            Console.WriteLine("How much would you like to make your lemonade cost?");
+            Console.WriteLine("How much would you like to make your lemonade cost? Example 0.20");
             productPrice = double.Parse(Console.ReadLine());
 
         }
