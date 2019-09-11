@@ -13,7 +13,7 @@ namespace Lemonade_Project_fr
         
 
        
-        public void CustomerChoice(weather weather,double productPrice)
+        public void CustomerChoice(weather weather,double productPrice) ////single responsabilty
         {
 
             if (weather.actualTemperature < 78 && productPrice > 0.20)
